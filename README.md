@@ -1,1 +1,1 @@
-# TypeScript exmples
+# TypeScript exmaples
