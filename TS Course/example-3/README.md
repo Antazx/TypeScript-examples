@@ -19,17 +19,30 @@ Array de longitud = 2, role: (string | number)[]
 
 ### Enumeraciones
 
-Valores que sean legibles
+Valores globales que sean legibles
 En vez de:
 
 > role: 0
 
 Usamos:
 
-Evitando
+> enum Role { ADMIN, READONLY, AUTHOR };
+> role: Role.ADMIN
+> if (person.role === Role.ADMIN) {
+> ... admin things ..;
+> }
+
+En este ejemplo ADMIN = 1, READONLY = 2 ...
+Evitando:
 
 > role: 'ADMIN'
 > ...
 > if (person.role === 'ADMIN') {
 > ... admin things ..;
 > }
+
+Se puede:
+
+> enum Role { ADMIN = 'admin', READONLY = 7, AUTHOR };
+
+Para definir los valores de cada etiqueta

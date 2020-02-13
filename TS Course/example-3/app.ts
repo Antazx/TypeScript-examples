@@ -17,11 +17,16 @@
 // person.role[1] = 10;
 // person.role = [0, 'admin'];
 
+// const ADMIN = 0;
+// const USER = 1;
+
+enum Role { ADMIN = 'admin', READONLY = 7, AUTHOR };
+
 const person = {
     name: 'Guillermo',
     age: 25,
     hobbies: ['Sports', 'Cooking'],
-    role: 'ADMIN'
+    role: Role.ADMIN
 };
 
 
@@ -34,6 +39,6 @@ for (const hobby of person.hobbies) {
     console.log(hobby.toUpperCase());
 }
 
-if (person.role === 'ADMIN') {
+if (person.role === Role.ADMIN) {
     console.log('Is admin');
 }

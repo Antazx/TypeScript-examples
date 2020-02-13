@@ -1,1 +1,1 @@
-# TypeScript exmaples
+# TypeScript examples
